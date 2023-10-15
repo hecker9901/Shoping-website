@@ -4,7 +4,7 @@ Hacktoberfest 2k23<br>
 Problem statement- Create a shopping website <br>
 ### Team members -
 -write your name here. Dont delete anybody else's name or your PR wont be accepted.<br>
-- !st contibuter
+- 1st contibuter
 # Shopping-Website
 Welcome to the README for our Shopping Website project! This repository contains the source code and assets for our shopping website.
 

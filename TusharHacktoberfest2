@@ -1,0 +1,89 @@
+************************************************* SCHOOL MANAGEMENT PROGRAM IN JAVA ************************************************************
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    private int rollNumber;
+    private String name;
+    private int age;
+    private String className;
+
+    public Student(int rollNumber, String name, int age, String className) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.age = age;
+        this.className = className;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    @Override
+    public String toString() {
+        return "Roll Number: " + rollNumber + ", Name: " + name + ", Age: " + age + ", Class: " + className;
+    }
+}
+
+public class SchoolManagementSystem {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("School Management System");
+            System.out.println("1. Add Student");
+            System.out.println("2. List Students");
+            System.out.println("3. Exit");
+            System.out.print("Select an option: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Roll Number: ");
+                    int rollNumber = scanner.nextInt();
+                    scanner.nextLine(); // Consume newline
+
+                    System.out.print("Enter Name: ");
+                    String name = scanner.nextLine();
+
+                    System.out.print("Enter Age: ");
+                    int age = scanner.nextInt();
+                    scanner.nextLine(); // Consume newline
+
+                    System.out.print("Enter Class: ");
+                    String className = scanner.nextLine();
+
+                    Student student = new Student(rollNumber, name, age, className);
+                    students.add(student);
+                    System.out.println("Student added successfully!");
+                    break;
+                case 2:
+                    System.out.println("List of Students:");
+                    for (Student s : students) {
+                        System.out.println(s);
+                    }
+                    break;
+                case 3:
+                    System.out.println("Exiting the program.");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}

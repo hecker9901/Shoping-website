@@ -1,14 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Merriweather, oswald;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
 }
 
 .product-list {
@@ -31,11 +31,11 @@ header {
 
 .price {
     font-weight: bold;
-    color: #f00;
+    color: rgb(0, 255, 115);
 }
 
 .add-to-cart {
-    background-color: #4caf50;
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px;
@@ -45,4 +45,14 @@ header {
 
 .add-to-cart:hover {
     background-color: #45a049;
+
+}
+
+footer{
+    background-color: black; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+
 }

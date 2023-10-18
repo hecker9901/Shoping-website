@@ -87,3 +87,99 @@ public class SchoolManagementSystem {
         }
     }
 }
+
+************************************************* SCHOOL MANAGEMENT PROGRAM IN cpp ************************************************************
+#include<bits/stdc++.h>
+
+class Student {
+private:
+    int rollNumber;
+    std::string name;
+    int age;
+    std::string className;
+
+public:
+    Student(int rollNumber, std::string name, int age, std::string className) {
+        this->rollNumber = rollNumber;
+        this->name = name;
+        this->age = age;
+        this->className = className;
+    }
+
+    int getRollNumber() {
+        return rollNumber;
+    }
+
+    std::string getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    std::string getClassName() {
+        return className;
+    }
+
+    void displayStudentInfo() {
+        std::cout << "Roll Number: " << rollNumber << ", Name: " << name << ", Age: " << age << ", Class: " << className << std::endl;
+    }
+};
+
+int main() {
+    std::vector<Student> students;
+
+    while (true) {
+        std::cout << "School Management System" << std::endl;
+        std::cout << "1. Add Student" << std::endl;
+        std::cout << "2. List Students" << std::endl;
+        std::cout << "3. Exit" << std::endl;
+        std::cout << "Select an option: ";
+
+        int choice;
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                std::cout << "Enter Roll Number: ";
+                int rollNumber;
+                std::cin >> rollNumber;
+
+                std::cin.ignore();  // Consume newline
+
+                std::cout << "Enter Name: ";
+                std::string name;
+                std::getline(std::cin, name);
+
+                std::cout << "Enter Age: ";
+                int age;
+                std::cin >> age;
+
+                std::cin.ignore();  // Consume newline
+
+                std::cout << "Enter Class: ";
+                std::string className;
+                std::getline(std::cin, className);
+
+                Student student(rollNumber, name, age, className);
+                students.push_back(student);
+                std::cout << "Student added successfully!" << std::endl;
+                break;
+            }
+            case 2:
+                std::cout << "List of Students:" << std::endl;
+                for (const Student& student : students) {
+                    student.displayStudentInfo();
+                }
+                break;
+            case 3:
+                std::cout << "Exiting the program." << std::endl;
+                return 0;
+            default:
+                std::cout << "Invalid choice. Please try again." << std::endl;
+        }
+    }
+
+    return 0;
+}

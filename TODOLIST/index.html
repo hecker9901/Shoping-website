@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+<title> Ok's To-Do List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Tilt+Neon&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-rectangle-list"></i> To-Do List</h1>
+        <div class="add-task">
+            <input type="text" id="task" placeholder="Add a new task...">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="task-list">
+        </ul>
+    </div>
+    
+    <div class="filter-sort-buttons">
+        <select id="status-select">
+            <option value="all">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+        <select id="priority-select">
+            <option value="all">All Priority</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

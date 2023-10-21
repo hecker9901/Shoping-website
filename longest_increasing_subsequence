@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int solve(int arr[], int n, int curr, int prev){
+    if(curr >= n)
+        return 0;
+    if(prev == -1 || arr[curr]>arr[prev]){
+        
+        return 1 + solve(arr,n,curr+1,curr);
+    }
+    else{
+        return solve(arr,n,curr+1,prev);
+    }
+}
+int main()
+{
+    int arr[] = {0,1,2,3,4,5,6,7,8,9,4,4,4};
+    int n = 13;
+    int curr = 0;
+    int prev = -1;
+    int ans = solve(arr, n, curr, prev);
+
+    cout<<"LIS is "<<ans<<endl;
+
+    return 0;
+}

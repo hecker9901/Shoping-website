@@ -7,44 +7,45 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
 .product-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .product {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-    max-width: 250px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  max-width: 250px;
 }
 
 .product img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .price {
-    font-weight: bold;
-    color: #f00;
+  font-weight: bold;
+  color: #f00;
 }
 
 .add-to-cart {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
+  border-radius: 10px; /* Adjust the border-radius to control the roundness */
+  background-color: #3498db; /* Set the background color */
+  color: white; /* Set the text color */
+  font-size: 16px; /* Set the font size */
+  padding: 10px 20px; /* Adjust the padding to control the button size */
+  border: none; /* Remove the default button border */
+  cursor: pointer;
 }
 
 .add-to-cart:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }

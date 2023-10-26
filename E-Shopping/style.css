@@ -27,14 +27,15 @@ html {
 
 .btn {
     cursor: pointer;
-    border: .2rem solid rgba(0, 119, 255, 0.708);
+    border: .3rem solid rgba(131, 206, 224, 1);
     color: rgba(0, 119, 255, 0.708);
     background: none;
-    padding: .5rem 3rem;
+    padding: 1rem 3rem;
     margin-top: 1rem;
     position: relative;
     z-index: 0;
     font-size: 2rem;
+    border-radius: 1rem;
 }
 
 .btn::before {
@@ -55,7 +56,7 @@ html {
 }
 
 .btn:hover {
-    color: #fff;
+    color: #5585b5;
 }
 
 .heading {

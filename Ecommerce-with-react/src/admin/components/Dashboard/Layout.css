@@ -1,0 +1,13 @@
+.sections {
+  padding: 1rem;
+  background-color: #eceff1;
+  background: linear-gradient(
+    158deg,
+    rgba(224, 224, 224) 0%,
+    rgba(233, 237, 254) 100%
+  );
+  display: flex;
+
+  flex-wrap: wrap;
+  min-height: 90vh;
+}

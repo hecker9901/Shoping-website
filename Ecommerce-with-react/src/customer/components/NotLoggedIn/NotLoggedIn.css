@@ -1,0 +1,47 @@
+.not-logged-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  margin-block: 2rem;
+}
+
+.not-logged-content {
+  text-align: center;
+}
+
+.not-logged-image {
+  max-width: 500px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .not-logged-image {
+    max-width: 400px;
+  }
+}
+.not-logged-title {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.not-logged-text {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.not-logged-button {
+  padding: 10px 20px;
+  background-color: #9155fd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.not-logged-button:hover {
+  background-color: #9155fe;
+}

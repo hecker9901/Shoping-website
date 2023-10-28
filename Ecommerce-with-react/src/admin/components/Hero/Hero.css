@@ -1,0 +1,28 @@
+.right-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+}
+.right-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gradient-blue {
+  background: linear-gradient(
+    158deg,
+    rgb(81, 190, 255) 0%,
+    rgb(81, 190, 252) 100%
+  );
+  color: white;
+}
+
+.gradient-green {
+  background: linear-gradient(
+    158deg,
+    rgb(255, 105, 138) 0%,
+    rgb(255, 105, 137) 100%
+  );
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header section starts  -->
+    <header>
+        <a href="#" class="logo"><span>Shopping</span>Buddy</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#register">Cart</a></li>
+                <li><a href="#login">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header section ends -->
+
+    <!-- products section starts  -->
+    <section class="products" id="products">
+        <h2>Featured Products</h2>
+        <div class="product-carousel">
+            <!-- Product recommendations will be displayed here dynamically -->
+        </div>
+    </section>
+    <!-- products section ends -->
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        created by <a href="#">Prakhs</a> | all rights reserved.
+    </section>
+    <!-- footer section ends -->
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Simulated product data (Just for testing algorithm...)
+      // Make sure to replace the placeholder data in the products array with your actual product data and images
+        const products = [
+            { id: 1, name: 'Blue T-Shirt', description: 'Comfortable and stylish blue t-shirt', price: 19.99, image: 'blue-shirt.jpg' },
+            { id: 2, name: 'Black Jeans', description: 'Slim-fit black jeans for a trendy look', price: 24.99, image: 'black-jeans.jpg' },
+            { id: 3, name: 'Running Shoes', description: 'High-performance running shoes for athletes', price: 29.99, image: 'running-shoes.jpg' }
+            // Add more product data as needed
+        ];
+
+        // Function to recommend products based on user preferences
+        function recommendProducts(userPreferences) {
+            // Example logic for recommending products based on user preferences
+            // You can implement more sophisticated recommendation algorithms here
+            const recommendedProducts = products.filter(product => userPreferences.includes(product.id));
+            return recommendedProducts;
+        }
+
+        // Example user preferences
+        const userPreferences = [1, 3]; // User prefers products with IDs 1 and 3
+
+        // Function to display recommended products
+        function displayRecommendedProducts() {
+            const recommendedProductsElement = document.querySelector('.product-carousel');
+            const recommendedProducts = recommendProducts(userPreferences);
+            recommendedProducts.forEach(product => {
+                recommendedProductsElement.innerHTML += `
+                    <div class="product-item">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p>Price: $${product.price}</p>
+                        <button>Add to Cart</button>
+                    </div>
+                `;
+            });
+        }
+
+        // Call the function to display recommended products
+        displayRecommendedProducts();
+        console.log("hii");
+        // console.log(displayRecommendedProducts());
+    </script>
+</body>
+</html>

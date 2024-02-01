@@ -45,6 +45,7 @@ header {
 
 .add-to-cart:hover {
     background-color: #45a049;
+
 }
 
 footer{
@@ -52,4 +53,6 @@ footer{
     color: white;
     padding: 20px;
     text-align: center;
+
+
 }
